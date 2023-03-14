@@ -1,0 +1,48 @@
+.hide {
+    display: none !important;
+}
+
+body {
+    background-color: goldenrod;
+    display: grid;
+}
+
+#question-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    justify-self: center;
+    max-width: 70%;
+    background-color: greenyellow;
+    margin: 5%;
+}
+
+#answer-buttons {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 5%;
+
+}
+ 
+.correct {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
+
+.progress {
+    width: 100%;
+}
+
+#progress-bar {
+    width: 0%;
+}
