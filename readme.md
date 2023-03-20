@@ -36,21 +36,19 @@ ___
 
 A continuación, se mostrarán distintas imágenes de las funcionalidades del juego en la interacción de usuario.
 
-Primeramente, la imagen de la página principal en la que vemos el título y el botón "start" para comenzar
+Primeramente, la imagen de la página principal en la que vemos el título y el botón "start" para comenzar.
 
 ![imagen Home](./assets/startimage.png)
 
-Al pulsar "start" se muestra la primera pregunta con las cuatro opciones y hemos añadido una barra de progreso que aumenta conforme avanzamos en el cuestionario
+Al pulsar "start" se muestra la primera pregunta con las cuatro opciones y hemos añadido un temporizador de 10 segundos en el que si no se responde a la pregunta en ese tiempo se pasará a la siguiente.
 
-![imagen primera pregunta](./assets/firstanswerimage.png)
+![imagen primera pregunta](./assets/firstquestionimage.png)
 
-Conforme avanzamos en el cuestionario se observa como se van coloreando las respuestas según sea correcta o incorrecta y la barra de progreso. 
+Conforme avanzamos en el cuestionario se observa como se van coloreando las respuestas según sea correcta o incorrecta.
 
-![imagen última pregunta](./assets/answersimage.png)
+También hemos añadido una función para que al terminar el cuestionario aparezcan la media y puntuación maxima por cada vez que se juega. También reaparece el botón de "Restart" y el botón de "Home". 
 
-Hemos añadido una función para que al terminar el cuestionario además de las respuestas correctas, se vea también la media y puntuación maxima por cada vez que se juega. También reaparece el botón de "Restart" y el botón de "Home".
-
-(imagen con la puntuación)
+![imagen última pregunta](./assets/lastquestionimage.png)
 
 Por último, en la sección de "Home" aparece una gráfica de la evolución del número de aciertos cada vez que se juega a Quiz Sport
 y el botón de "start" para volver a jugar.
