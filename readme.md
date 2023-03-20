@@ -34,29 +34,34 @@ ___
 
 ## Ejecutando las pruebas ⚙️
 
-A continuacion se mostrarán distintas imagenes de las funcionalidades del juego en la interacción de usuario.
+A continuación, se mostrarán distintas imágenes de las funcionalidades del juego en la interacción de usuario.
 
-Primeramente, la imagen de la pagina principal
+Primeramente, la imagen de la página principal en la que vemos el título y el botón "start" para comenzar
 
-(imagen)
+![imagen Home](./assets/startimage.png)
 
-Despues acedemos a la primera pregunta y vemos como al clickar en la respuesta, se nos pinta de verde la correcta y en rojo las incorrectas
+Al pulsar "start" se muestra la primera pregunta con las cuatro opciones y hemos añadido una barra de progreso que aumenta conforme avanzamos en el cuestionario
 
-(imagen)
+![imagen primera pregunta](./assets/firstanswerimage.png)
 
-Una vez transcurrida la misma secuencia durante las diez preguntas que componen el juego, mostramos lo que sucede una vez contestamos la ultima pregunta.
+Conforme avanzamos en el cuestionario se observa como se van coloreando las respuestas según sea correcta o incorrecta y la barra de progreso. 
 
-(IMAGEN)
+![imagen última pregunta](./assets/answersimage.png)
 
-la imagen muestra como aparecen los indicadores de las respuestas acertadas, media y puntuación maxima por cada vez que se juega. También reaparece el boton de volver a jugar y el boton de "Home".
+Hemos añadido una función para que al terminar el cuestionario además de las respuestas correctas, se vea también la media y puntuación maxima por cada vez que se juega. También reaparece el botón de "Restart" y el botón de "Home".
 
-Por ultimo, en esta sección aparece una grafica de la evolución del numero de aciertos cada vez que se juega a Quiz Sport
+(imagen con la puntuación)
+
+Por último, en la sección de "Home" aparece una gráfica de la evolución del número de aciertos cada vez que se juega a Quiz Sport
+y el botón de "start" para volver a jugar.
+
+![imagen primera pregunta](./assets/graphycimage.png)
 
 ---
 
 ### Temas de Bootstrap 🔩
 
-En cuanto al estilo hemos aplicado nuestra propia hoja de estilos con CSS y hemos añadido un tema de Bootstrap. Para aplicarlo hemos linkeado en el HTML el enlace que nos descargamos cuando elegimos el tema
+En cuanto al estilo, hemos aplicado nuestra propia hoja de estilos con CSS, algunas clases de Bootstrap y hemos añadido un tema también de Bootstrap. Para aplicarlo hemos linkeado en el HTML el enlace que nos descargamos cuando elegimos el tema.
 
 ```html
 <link rel="stylesheet" href="./styles/bootstrap.min.css">
