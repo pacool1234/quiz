@@ -166,13 +166,18 @@ function plotGraph(xValues, yValues) {
             datasets: [{
             fill: false,
             lineTension: 0,
-            backgroundColor: "rgba(0,0,255,1.0)",
-            borderColor: "rgba(0,0,255,0.1)",
-            data: yValues
+            //backgroundColor: "rgba(20,150,255,1.0)",
+            borderColor: "rgba(0,0,255,1.0)",
+            data: yValues,
+            fill: true
             }]
         },
         options: {
             legend: {display: false},
+            title: {
+                display: true,
+                text: "Evolución de tu media de aciertos"
+            },
             // scales: {
             // yAxes: [{ticks: {min: 6, max:16}}],
             // }

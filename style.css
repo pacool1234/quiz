@@ -3,25 +3,46 @@
 }
 
 body {
-    background-color: goldenrod;
+    background-color: rgb(140, 213, 242);
     display: grid;
 }
 
+.title {
+    text-align: center;
+    margin-top: 50px;
+    justify-content: center;
+
+}
+
 #question-container {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     justify-self: center;
     max-width: 70%;
-    background-color: greenyellow;
+    background-color: rgb(140, 213, 242);
     margin: 5%;
-}
 
+}
+#question {
+    margin-bottom: 15%;
+    justify-content: center;
+    text-align: center;
+}
 #answer-buttons {
     columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
+    border-radius: 24rem;
+}
+
+.controls {
+    justify-content: space-around;
+    align-items: center;
+    justify-self: center;
 }
 
 button {
@@ -40,9 +61,27 @@ button {
 }
 
 .progress {
-    width: 100%;
+    width: 70%;
+    margin-top: 20%;
 }
 
 #progress-bar {
     width: 0%;
+}
+
+#canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+}
+
+#myChart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    margin-top: 50px;
 }
