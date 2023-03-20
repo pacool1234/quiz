@@ -4,7 +4,13 @@
 
 body {
     background-color: rgb(140, 213, 242);
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div {
+    margin: 15px;
 }
 
 .title {
@@ -67,6 +73,7 @@ button {
 
 #progress-bar {
     width: 0%;
+    color: chartreuse;
 }
 
 #canvas {

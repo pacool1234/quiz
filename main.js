@@ -103,9 +103,11 @@ function selectAnswer() { //creamos la funcion seleccionar respuesta, sin parame
         startButton.classList.remove('hide');// y dicho boton se mostrar'a
         currentQuestionIndex++;
         progressBar.style.width = `${(currentQuestionIndex / numberOfQuestions) * 100}%`
+        document.getElementById("demo").innerHTML = "EXPIRED";
         
         upLoadToLocal()
         calculateStats()
+        showResult()
 
         resultado = 0
 
@@ -186,20 +188,44 @@ function plotGraph(xValues, yValues) {
 }
 
 function timer() {
-    let countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+    let countDownDate = new Date(Date.now());
+    let seconds = countDownDate.getSeconds()
+    let referenceIndex = currentQuestionIndex
+    countDownDate.setSeconds(seconds + 11) // Set countdown per question
+    
     let x = setInterval(function() {
-    let now = new Date().getTime();
-    let distance = countDownDate - now;
-    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-    }
+        let now = new Date(Date.now());
+        let distance = countDownDate - now
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("demo").innerHTML = seconds + "s ";
+        if (distance < 1) {
+            clearInterval(x)
+            document.getElementById("demo").innerHTML = ''
+            currentQuestionIndex++
+            progressBar.style.width = `${(currentQuestionIndex / numberOfQuestions) * 100}%`
+            if (currentQuestionIndex < numberOfQuestions) {
+                setNextQuestion()
+            } else {
+                startButton.innerText = 'Restart';// o se entender'a que hemos llegado al final por lo que al boton de comenzar le metemos un nuevo texto de Restart
+            startButton.classList.remove('hide');// y dicho boton se mostrar'a
+            currentQuestionIndex++;
+            progressBar.style.width = `${(currentQuestionIndex / numberOfQuestions) * 100}%`
+            
+            upLoadToLocal()
+            calculateStats()
+            showResult()
+
+            resultado = 0
+
+            // Timer overlaps when clicking answers CONTINUE HEREEEEEEEEEEEEEEEEEEEE
+
+            result.classList.remove('hide')
+            menuBtn.classList.remove('hide');
+            }
+        } else if (referenceIndex !== currentQuestionIndex) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = ''
+        }
     }, 1000);
 }
 
